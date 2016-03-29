@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="studio.mitra.lightsoff.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mainTextView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wakeUpText"
+            android:textSize="30sp"
+
+            android:textStyle="bold" />
+        <!--for the time setup -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--for the hours setup -->
+            <Button
+                android:id="@+id/hourButtonDec"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:onClick="hourDec"
+                android:text="@string/buttonDec"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hourTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="@string/clockText"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/hourButtonInc"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:onClick="hourInc"
+                android:text="@string/buttonInc"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!--for the minutes setup -->
+            <Button
+                android:id="@+id/minButtonDec"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="12dp"
+                android:onClick="minDec"
+                android:text="@string/buttonDec"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/minTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:text="@string/clockText"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/minButtonInc"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:onClick="minInc"
+                android:text="@string/buttonInc"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <!--for the AM/PM setup -->
+            <Button
+                android:id="@+id/amPmButton"
+                android:layout_width="56dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="12dp"
+                android:onClick="amPmButton"
+                android:text="@string/amPm"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--The calclulate button -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/calculate"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/viewWakeUpTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

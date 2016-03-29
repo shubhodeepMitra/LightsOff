@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lights Off</string>
+    <string name="wakeUpText">I need to WAKE Up at</string>
+    <string name="clockText">01</string>
+    <string name="buttonDec">-</string>
+    <string name="buttonInc">+</string>
+    <string name="amPm">AM</string>
+    <string name="calculate">CALCULATE</string>
+</resources>
