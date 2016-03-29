@@ -6,4 +6,5 @@
     <string name="buttonInc">+</string>
     <string name="amPm">AM</string>
     <string name="calculate">CALCULATE</string>
+    <string name="sleepText">YOU SHOULD WAKE UP AT</string>
 </resources>
