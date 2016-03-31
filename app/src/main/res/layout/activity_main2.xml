@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#546E7A"
     tools:context="studio.mitra.lightsoff.Main2Activity">
 
         <TextView
@@ -14,12 +15,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sleepText"
-            android:textSize="30sp"/>
+            android:textSize="30sp"
+            android:textColor="#CFD8DC"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sleepText"
         android:layout_below="@id/viewSleepTime"
+        android:textSize="25sp"
+        android:textColor="#FF5722"
         />
     <Button
         android:layout_width="wrap_content"
@@ -28,7 +32,8 @@
         android:text="@string/alarm"
         android:textSize="20sp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#1DE9B6"/>
     <!--<Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

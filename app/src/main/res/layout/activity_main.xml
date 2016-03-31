@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#546E7A"
     tools:context="studio.mitra.lightsoff.MainActivity">
 
     <LinearLayout
@@ -16,6 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/wakeUpText"
             android:textSize="30sp"
+            android:textColor="#CFD8DC"
 
             android:textStyle="bold" />
         <!--for the time setup -->
@@ -31,7 +33,8 @@
 
                 android:text="@string/buttonDec"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#1DE9B6"/>
 
             <TextView
                 android:id="@+id/hourTextView"
@@ -41,7 +44,8 @@
                 android:layout_marginRight="6dp"
                 android:text="@string/clockText"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#CFD8DC"/>
 
             <Button
                 android:id="@+id/hourButtonInc"
@@ -50,7 +54,8 @@
 
                 android:text="@string/buttonInc"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#1DE9B6"/>
 
             <!--for the minutes setup -->
             <Button
@@ -61,7 +66,8 @@
 
                 android:text="@string/buttonDec"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#1DE9B6"/>
 
             <TextView
                 android:id="@+id/minTextView"
@@ -71,7 +77,8 @@
                 android:layout_marginRight="6dp"
                 android:text="@string/clockTextM"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#CFD8DC"/>
 
             <Button
                 android:id="@+id/minButtonInc"
@@ -80,7 +87,8 @@
 
                 android:text="@string/buttonInc"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#1DE9B6"/>
             <!--for the AM/PM setup -->
             <Button
                 android:id="@+id/amPmButton"
@@ -90,7 +98,8 @@
 
                 android:text="@string/amPm"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="#1DE9B6"/>
 
         </LinearLayout>
 
@@ -102,7 +111,9 @@
             android:text="@string/calculate"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:id="@+id/calculateButton"/>
+            android:layout_marginTop="25dp"
+            android:id="@+id/calculateButton"
+            android:background="#1DE9B6"/>
 
 
 
