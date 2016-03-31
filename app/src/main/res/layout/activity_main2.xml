@@ -10,10 +10,33 @@
     tools:context="studio.mitra.lightsoff.Main2Activity">
 
         <TextView
-            android:id="@+id/viewWakeUpTime"
+            android:id="@+id/viewSleepTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sleepText"
             android:textSize="30sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sleepText"
+        android:layout_below="@id/viewSleepTime"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/goAlarm"
+        android:text="@string/alarm"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <!--<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:text="@string/back"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/goAlarm"
+        android:layout_toEndOf="@+id/goAlarm" />-->
 
 </RelativeLayout>

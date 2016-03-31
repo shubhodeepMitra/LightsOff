@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Button minInc = (Button)findViewById(R.id.minButtonInc);
 
         //AM|PM button
-        Button amPm=(Button) findViewById(R.id.amPmButton);
+        final Button amPm=(Button) findViewById(R.id.amPmButton);
 
         //------------------------------------------------------
         /**
@@ -169,6 +169,17 @@ public class MainActivity extends AppCompatActivity {
                 new Button.OnClickListener() {
                     public void onClick(View view) {
                         Intent i = new Intent(MainActivity.this, Main2Activity.class);
+
+                        /**
+                         * Sending the values of hour, minutes and am/pm to main2activity
+                         */
+                        //hour value
+                        i.putExtra("hours",hours);
+
+                        //minutes value
+                        i.putExtra("minutes",mins);
+                        //am/pm value
+                        i.putExtra("amPm",period);
                         startActivity(i);
                     }
                 }
