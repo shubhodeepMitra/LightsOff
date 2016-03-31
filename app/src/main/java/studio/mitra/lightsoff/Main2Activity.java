@@ -43,7 +43,10 @@ public class Main2Activity extends AppCompatActivity {
                     p *= -1;
 
                 }
-                h -= 1;
+                if(h==1)
+                    h=12;
+                else
+                    h -= 1;
             }
             else
                 m-=5;
