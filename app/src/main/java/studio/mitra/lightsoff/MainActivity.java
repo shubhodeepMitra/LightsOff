@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
      */
 
     //to count the hours
-    public static int hours=1;
+    public  int hours=1;
 
     //to count minutes
-    public static int mins=0;
+    public  int mins=0;
 
     //to keep track of am and pm
-    public static int period=1;
+    public  int period=1;
 
     //-----------------------------------------------------------------------------
 
