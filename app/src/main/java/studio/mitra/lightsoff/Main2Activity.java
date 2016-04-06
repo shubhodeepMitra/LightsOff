@@ -59,7 +59,7 @@ public class Main2Activity extends AppCompatActivity {
         /**
          * back button
          */
-       /* Button back= (Button)findViewById(R.id.backButton);
+        Button back= (Button)findViewById(R.id.backButton);
         back.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View view){
@@ -69,7 +69,7 @@ public class Main2Activity extends AppCompatActivity {
                         startActivity(backI);
                     }
                 }
-        );*/
+        );
 
 
     }

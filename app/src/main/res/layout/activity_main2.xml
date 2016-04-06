@@ -34,14 +34,16 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="#1DE9B6"/>
-    <!--<Button
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/backButton"
         android:text="@string/back"
         android:textSize="20sp"
+        android:layout_marginLeft="6dp"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/goAlarm"
-        android:layout_toEndOf="@+id/goAlarm" />-->
+        android:layout_toEndOf="@+id/goAlarm"
+        android:background="#1DE9B6"/>
 
 </RelativeLayout>
