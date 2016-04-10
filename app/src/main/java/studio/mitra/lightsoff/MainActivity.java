@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                         //am/pm value
                         i.putExtra("amPm",period);
                         startActivity(i);
-                        finish();
+                        finish(); //so that current activity is not stacked behind the new one.
                     }
                 }
         );

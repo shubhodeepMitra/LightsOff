@@ -68,7 +68,7 @@ public class Main2Activity extends AppCompatActivity {
                         //new intent to go back to main menu
                         Intent backI = new Intent(Main2Activity.this, MainActivity.class);
                         startActivity(backI);
-                        finish();
+                        finish(); // so that current activity is not stacked behind the new one.
                     }
                 }
         );
