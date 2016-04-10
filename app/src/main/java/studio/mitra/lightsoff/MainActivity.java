@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                         //am/pm value
                         i.putExtra("amPm",period);
                         startActivity(i);
+                        finish();
                     }
                 }
         );
