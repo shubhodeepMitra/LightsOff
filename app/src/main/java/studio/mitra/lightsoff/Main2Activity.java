@@ -1,5 +1,6 @@
 package studio.mitra.lightsoff;
 
+import android.provider.AlarmClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
@@ -72,6 +73,7 @@ public class Main2Activity extends AppCompatActivity {
         );
 
 
+
     }
 
     /**
@@ -136,6 +138,20 @@ public class Main2Activity extends AppCompatActivity {
 
 
 
+    }
+
+    /**
+     * SET_ALARM method (Calling default intent for alarm)
+     */
+    public void setAlarm(View view) {
+        Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
+        /*i.putExtra(AlarmClock.EXTRA_MESSAGE, "New Alarm");
+        i.putExtra(AlarmClock.EXTRA_HOUR, 11);
+        i.putExtra(AlarmClock.EXTRA_MINUTES, 20);*/
+
+        if (i.resolveActivity(getPackageManager()) != null) {
+            startActivity(i);
+        }
     }
 
 }
