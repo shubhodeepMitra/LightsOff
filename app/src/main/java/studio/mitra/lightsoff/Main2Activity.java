@@ -1,6 +1,8 @@
 package studio.mitra.lightsoff;
 
+import android.content.DialogInterface;
 import android.provider.AlarmClock;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Bundle;
@@ -21,14 +23,14 @@ public class Main2Activity extends AppCompatActivity {
         /**
          * Receiving values from main activity
          */
-        Intent in=getIntent();
+        Intent in = getIntent();
 
         //fetching hours
-        int h=in.getIntExtra("hours",0);
+        int h = in.getIntExtra("hours", 0);
         //fetching mins
-        int m=in.getIntExtra("minutes",0);
+        int m = in.getIntExtra("minutes", 0);
         //fetching am or pm
-        int p=in.getIntExtra("amPm",1);
+        int p = in.getIntExtra("amPm", 1);
 
 
         /**
@@ -36,21 +38,19 @@ public class Main2Activity extends AppCompatActivity {
          */
         String aP;
         int i;
-        for(i=1;i<=15;i+=5)
-        {
-            if(m==0) {
+        for (i = 1; i <= 15; i += 5) {
+            if (m == 0) {
                 m = 55;
                 if (h == 12) {
                     p *= -1;
 
                 }
-                if(h==1)
-                    h=12;
+                if (h == 1)
+                    h = 12;
                 else
                     h -= 1;
-            }
-            else
-                m-=5;
+            } else
+                m -= 5;
         }
 
 
@@ -60,10 +60,10 @@ public class Main2Activity extends AppCompatActivity {
         /**
          * back button
          */
-        Button back= (Button)findViewById(R.id.backButton);
+        Button back = (Button) findViewById(R.id.backButton);
         back.setOnClickListener(
-                new Button.OnClickListener(){
-                    public void onClick(View view){
+                new Button.OnClickListener() {
+                    public void onClick(View view) {
 
                         //new intent to go back to main menu
                         Intent backI = new Intent(Main2Activity.this, MainActivity.class);
@@ -74,69 +74,65 @@ public class Main2Activity extends AppCompatActivity {
         );
 
 
-
     }
 
     /**
      * method to calculate the time
+     *
      * @param hrs
      * @param min
      * @param p
      */
-    private void calculateSleep(int hrs,int min,int p)
-    {
+    private void calculateSleep(int hrs, int min, int p) {
         /**
          * initialization of variables
          */
-            int i,j,sum;
-            sum=0;
-            String output,aP;
-            output=" ";
-        TextView t=(TextView)findViewById(R.id.sleepText);
+        int i, j, sum;
+        sum = 0;
+        String output, aP;
+        output = " ";
+        TextView t = (TextView) findViewById(R.id.sleepText);
 
 
+        for (i = 1; i <= 108; i++) {
+            sum += 5;
 
-            for(i=1;i<=108;i++) {
-                sum += 5;
+            if (min == 0) {     //if minutes is 0 then decreased minute will be 55 and hour-1
+                min = 55;
+                if (hrs == 12) {  //checking the coversion of am | pm
+                    p *= -1;
 
-                if (min == 0) {     //if minutes is 0 then decreased minute will be 55 and hour-1
-                    min = 55;
-                    if (hrs == 12) {  //checking the coversion of am | pm
-                        p *= -1;
-
-                    }
-                    if(hrs==1)
-                        hrs=12;
-                    else
-                        hrs -= 1;
                 }
+                if (hrs == 1)
+                    hrs = 12;
                 else
-                    min -= 5;
+                    hrs -= 1;
+            } else
+                min -= 5;
 
-                //storing the output into the string output
-                if (sum % 90 == 0 && sum >= 270) {
+            //storing the output into the string output
+            if (sum % 90 == 0 && sum >= 270) {
 
-                    if (p == 1)
-                        aP = "AM";
+                if (p == 1)
+                    aP = "AM";
+                else
+                    aP = "PM";
+                if (sum == 540) {
+                    if (min == 0)
+                        output = output + (hrs + ":00 " + aP);
+
                     else
-                        aP = "PM";
-                    if (sum == 540) {
-                        if(min==0)
-                            output = output + (hrs + ":00 " + aP);
-
-                        else
-                            output = output + (hrs + ":" + min + " " + aP);
-                    } else {
-                        if(min==0)
-                            output = output + (hrs + ":00 " + aP+ " or ");
-                        else
-                            output = output + (hrs + ":" + min + " " + aP + " or ");
-                    }
+                        output = output + (hrs + ":" + min + " " + aP);
+                } else {
+                    if (min == 0)
+                        output = output + (hrs + ":00 " + aP + " or ");
+                    else
+                        output = output + (hrs + ":" + min + " " + aP + " or ");
                 }
             }
+        }
 
-            t.setText(output);
-
+        t.setText(output);
 
 
     }
@@ -154,5 +150,22 @@ public class Main2Activity extends AppCompatActivity {
             startActivity(i);
         }
     }
+    //----------------------------------------------------
 
+    /**
+     * Overiding the back button of the phone to exit the app and popping an alert
+     */
+    /*@Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                        //System.exit(0);
+                    }
+                }).setNegativeButton("No", null).show();
+
+    }*/
 }

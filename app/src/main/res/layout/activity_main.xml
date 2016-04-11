@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#546E7A"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
     tools:context="studio.mitra.lightsoff.MainActivity">
 
     <LinearLayout
@@ -16,25 +18,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/wakeUpText"
-            android:textSize="30sp"
             android:textColor="#CFD8DC"
+            android:textSize="30sp"
 
-            android:textStyle="bold" />
+            />
         <!--for the time setup -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
             <!--for the hours setup -->
             <Button
                 android:id="@+id/hourButtonDec"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
 
+                android:background="@drawable/roundbutton"
                 android:text="@string/buttonDec"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="#1DE9B6"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/hourTextView"
@@ -42,20 +45,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
+
                 android:text="@string/clockText"
+                android:textColor="#CFD8DC"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#CFD8DC"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/hourButtonInc"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
 
+                android:background="@drawable/roundbutton"
                 android:text="@string/buttonInc"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="#1DE9B6"/>
+                android:textStyle="bold" />
 
             <!--for the minutes setup -->
             <Button
@@ -64,10 +68,10 @@
                 android:layout_height="36dp"
                 android:layout_marginLeft="12dp"
 
+                android:background="@drawable/roundbutton"
                 android:text="@string/buttonDec"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="#1DE9B6"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/minTextView"
@@ -76,19 +80,19 @@
                 android:layout_marginLeft="6dp"
                 android:layout_marginRight="6dp"
                 android:text="@string/clockTextM"
+                android:textColor="#CFD8DC"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#CFD8DC"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/minButtonInc"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
 
+                android:background="@drawable/roundbutton"
                 android:text="@string/buttonInc"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="#1DE9B6"/>
+                android:textStyle="bold" />
             <!--for the AM/PM setup -->
             <Button
                 android:id="@+id/amPmButton"
@@ -96,24 +100,25 @@
                 android:layout_height="48dp"
                 android:layout_marginLeft="12dp"
 
+                android:background="@drawable/rounded"
                 android:text="@string/amPm"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:background="#1DE9B6"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <!--The calclulate button -->
         <Button
+            android:id="@+id/calculateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/calculate"
-            android:textSize="30sp"
-            android:textStyle="bold"
             android:layout_marginTop="25dp"
-            android:id="@+id/calculateButton"
-            android:background="#1DE9B6"/>
+            android:background="@drawable/rounded"
+
+            android:padding="5dp"
+            android:text="@string/calculate"
+            android:textSize="25sp" />
 
 
 
