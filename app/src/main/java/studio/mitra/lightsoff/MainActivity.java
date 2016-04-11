@@ -189,8 +189,6 @@ public class MainActivity extends AppCompatActivity {
         );
 
 
-
-
     }
     //--------------------------------------------------------------------------------
 
@@ -240,6 +238,23 @@ public class MainActivity extends AppCompatActivity {
 
 
     //----------------------------------------------------
+
+    /**
+     * Overiding the back button of the phone to exit the app and popping an alert
+     */
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+
+                    }
+                }).setNegativeButton("No", null).show();
+
+    }
 
 }
 
