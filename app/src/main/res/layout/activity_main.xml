@@ -107,7 +107,7 @@
 
         </LinearLayout>
 
-        <!--The calclulate button -->
+        <!--The calculate button -->
         <Button
             android:id="@+id/calculateButton"
             android:layout_width="wrap_content"
@@ -121,6 +121,30 @@
             android:textSize="25sp" />
 
 
+        <!-- second option -->
+        <TextView
+            android:id="@+id/mainTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/wakeUpText2"
+            android:textColor="#CFD8DC"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/calculateButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+
+            android:padding="5dp"
+            android:text="@string/calculate2"
+            android:textSize="25sp" />
+
+
 
     </LinearLayout>
+
 </ScrollView>

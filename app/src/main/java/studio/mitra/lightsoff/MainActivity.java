@@ -167,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
          * Calculate Button Method
          */
         Button calc=(Button)findViewById(R.id.calculateButton);
+
         calc.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View view) {
@@ -184,6 +185,22 @@ public class MainActivity extends AppCompatActivity {
                         i.putExtra("amPm",period);
                         startActivity(i);
                         finish(); //so that current activity is not stacked behind the new one.
+                    }
+                }
+        );
+
+        /**
+         * Sleep now Button
+         */
+        Button sleep = (Button) findViewById(R.id.calculateButton2);
+        assert sleep != null;
+        sleep.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View view) {
+                        Intent in = new Intent(MainActivity.this, Main3Activity.class);
+                        startActivity(in);
+                        finish();
+
                     }
                 }
         );
