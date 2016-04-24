@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     //to count the hours
-    public  int hours=1;
+    public int hours = 0;
 
     //to count minutes
     public  int mins=0;
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     //decrement hours count
                     public  void onClick(View view)
                     {
-                        if(hours==1)
+                        if (hours == 1 || hours == 0)
                         {
                             hours=12;
                         }
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     //increment hours count
                     public void onClick(View view)
                     {
-                        if(hours==12)
+                        if (hours == 12 || hours == 0)
                         {
                             hours=1;
                         }

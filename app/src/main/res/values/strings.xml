@@ -2,8 +2,8 @@
     <string name="app_name">Lights Off</string>
     <string name="wakeUpText">I need to WAKE Up at</string>
     <string name="wakeUpText2">No clue when to WAKE UP</string>
-    <string name="clockText">01</string>
-    <string name="clockTextM">00</string>
+    <string name="clockText">Hrs</string>
+    <string name="clockTextM">Min</string>
     <string name="buttonDec">-</string>
     <string name="buttonInc">+</string>
     <string name="amPm">AM</string>

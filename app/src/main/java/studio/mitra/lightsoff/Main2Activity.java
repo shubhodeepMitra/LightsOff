@@ -1,6 +1,7 @@
 package studio.mitra.lightsoff;
 
 import android.content.DialogInterface;
+import android.net.Uri;
 import android.provider.AlarmClock;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +13,14 @@ import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
+import android.widget.Toast;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class Main2Activity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,7 @@ public class Main2Activity extends AppCompatActivity {
                 m = 55;
                 if (h == 12) {
                     p *= -1;
+                    h -= 1;
 
                 }
                 if (h == 1)
@@ -74,15 +82,19 @@ public class Main2Activity extends AppCompatActivity {
         );
         //onBackPressed();
 
+        /**
+         * Creating Toast to make user aware of the minimum time required for heathy sleep
+         */
 
+        Toast.makeText(Main2Activity.this, "Six hours of minimum sleep is advisable", Toast.LENGTH_SHORT).show();
     }
 
     /**
      * method to calculate the time
      *
-     * @param hrs
-     * @param min
-     * @param p
+     * @Shubhodeep hrs
+     * @Shubhodeep min
+     * @Shubhodeep p
      */
     private void calculateSleep(int hrs, int min, int p) {
         /**
@@ -92,6 +104,8 @@ public class Main2Activity extends AppCompatActivity {
         sum = 0;
         String output, aP;
         output = " ";
+
+        //Output field where the calculated value will be displayed
         TextView t = (TextView) findViewById(R.id.sleepText);
 
 
@@ -100,8 +114,9 @@ public class Main2Activity extends AppCompatActivity {
 
             if (min == 0) {     //if minutes is 0 then decreased minute will be 55 and hour-1
                 min = 55;
-                if (hrs == 12) {  //checking the coversion of am | pm
+                if (hrs == 12) {  //checking the conversion of am | pm
                     p *= -1;
+                    hrs -= 1;
 
                 }
                 if (hrs == 1)
@@ -112,7 +127,7 @@ public class Main2Activity extends AppCompatActivity {
                 min -= 5;
 
             //storing the output into the string output
-            if (sum % 90 == 0 && sum >= 270) {
+            if (sum % 90 == 0 && sum >= 180) {
 
                 if (p == 1)
                     aP = "AM";
@@ -133,6 +148,9 @@ public class Main2Activity extends AppCompatActivity {
             }
         }
 
+        /**
+         * Displaying the output in TextView with ID sleepText
+         */
         t.setText(output);
 
 
@@ -154,7 +172,7 @@ public class Main2Activity extends AppCompatActivity {
     //----------------------------------------------------
 
     /**
-     * Overiding the back button of the phone to exit the app and popping an alert
+     * Overriding the back button of the phone to exit the app and popping an alert
      */
     @Override
     public void onBackPressed() {
@@ -169,4 +187,6 @@ public class Main2Activity extends AppCompatActivity {
                 }).setNegativeButton("No", null).show();
 
     }
+
+
 }
