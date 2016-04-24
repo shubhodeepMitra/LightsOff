@@ -34,6 +34,12 @@ public class Main2Activity extends AppCompatActivity {
 
         //fetching hours
         int h = in.getIntExtra("hours", 0);
+
+        /**
+         * by default h is equal to 0 thats why changing it to 1 to get proper result
+         */
+        if (h == 0)
+            h = 1;
         //fetching mins
         int m = in.getIntExtra("minutes", 0);
         //fetching am or pm
@@ -133,17 +139,17 @@ public class Main2Activity extends AppCompatActivity {
                     aP = "AM";
                 else
                     aP = "PM";
-                if (sum == 540) {
+                if (sum == 180) {
                     if (min == 0)
-                        output = output + (hrs + ":00 " + aP);
+                        output = (hrs + ":00 " + aP) + output;
 
                     else
-                        output = output + (hrs + ":" + min + " " + aP);
+                        output = (hrs + ":" + min + " " + aP) + output;
                 } else {
                     if (min == 0)
-                        output = output + (hrs + ":00 " + aP + " or ");
+                        output = (hrs + ":00 " + aP + " or ") + output;
                     else
-                        output = output + (hrs + ":" + min + " " + aP + " or ");
+                        output = (hrs + ":" + min + " " + aP + " or ") + output;
                 }
             }
         }
